@@ -1,0 +1,8 @@
+/instance/crowd_lending.db
+/venv/
+/SRS.docx
+/TODO.md
+/.idea/
+/.env/
+/frontend/client/.env
+/Crowd_Lending_App.iml
