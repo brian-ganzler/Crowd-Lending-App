@@ -27,7 +27,7 @@ def get_user_by_username(connection, username):
     """
     try:
         cursor = connection.cursor()
-        cursor.execute("""SELECT user_id, username, password FROM User WHERE username == ?""", username)
+        cursor.execute("""SELECT user_id, username, password FROM User WHERE username == ?""", (username,))
         row = cursor.fetchone()
         return row
     except Exception:

@@ -11,7 +11,8 @@ def authenticate_user(connection, username, password):
 
     try:
         user = get_user_by_username(connection, username)
-        if user and user["password"] == password:
-            return user["user_id"]
+        if not user or user[2] != password:
+            raise Exception
+        return user[1]
     except Exception:
         return False
