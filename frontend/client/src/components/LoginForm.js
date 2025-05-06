@@ -3,7 +3,7 @@ import { authenticateUser } from "../services/authService";
 import { Box, Typography, TextField, Button } from "@mui/material";
 
 
-export function LoginUser(userData) {
+export function LoginUser() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("");
 
@@ -28,7 +28,7 @@ export function LoginUser(userData) {
                 width: 300,
                 margin: "auto" }}
         >
-            <Typography variant="h4" component="h1" align="center" gutterbottom> Login </Typography>
+            <Typography variant="h4" component="h1" align="center" gutterBottom> Login </Typography>
             <TextField
                 label="Username"
                 variant="outlined"

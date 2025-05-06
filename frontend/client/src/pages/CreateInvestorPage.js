@@ -4,7 +4,7 @@ import { CreateInvestorForm } from "../components/InvestorForm";
 function CreateInvestorPage() {
     return (
         <div>
-            <CreateInvestorForm />
+            < CreateInvestorForm />
         </div>
     );
 }

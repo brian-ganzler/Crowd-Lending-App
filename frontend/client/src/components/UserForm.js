@@ -30,7 +30,7 @@ export function CreateUserForm() {
                 width: 300,
                 margin: "auto" }}
         >
-            <Typography variant="h4" component="h1" align="center" gutterbottom> Create an Account </Typography>
+            <Typography variant="h4" component="h1" align="center" gutterBottom> Create an Account </Typography>
             <TextField
                 label="Username"
                 variant="outlined"

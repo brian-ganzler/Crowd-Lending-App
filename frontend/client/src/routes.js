@@ -1,3 +1,4 @@
+import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import CreateUserPage from "./pages/CreateUserPage";
 import CreateInvestorPage from "./pages/CreateInvestorPage";
@@ -5,13 +6,13 @@ import CreateInvestorPage from "./pages/CreateInvestorPage";
 
 
 const ROUTES = {
-    // HOME: {
-    //     path: "/",
-    //     element: <HomePage />
-    // },
+    HOME: {
+        path: "/",
+        element: < HomePage />
+    },
     LOGIN: {
         path: "/login",
-        element: <LoginPage />
+        element: < LoginPage />
     },
     CREATE_USER: {
         path: "/create-account",
@@ -21,10 +22,6 @@ const ROUTES = {
         path: "/create-investor",
         element: < CreateInvestorPage />
     }
-    // CREATE_BUSINESS: {
-    //     path: "/create-business",
-    //     element: < CreateBusinessPage />
-    // }
 };
 
 export default ROUTES;

@@ -30,7 +30,7 @@ export function CreateInvestorForm() {
                 width: 300,
                 margin: "auto" }}
         >
-            <Typography variant="h4" component="h1" align="center" gutterbottom> Create Investor Profile </Typography>
+            <Typography variant="h4" component="h1" align="center" gutterBottom> Create Investor Profile </Typography>
             <TextField
                 label="Preferences"
                 variant="outlined"
