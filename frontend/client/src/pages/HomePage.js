@@ -1,10 +1,10 @@
-import { HomeView } from "../components/HomeForm";
+import Navbar from "../components/Navbar";
 
 
 function HomePage() {
     return (
         <div>
-            < HomeView />
+            < Navbar />
         </div>
     );
 }
