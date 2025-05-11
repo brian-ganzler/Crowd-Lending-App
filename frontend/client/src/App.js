@@ -1,9 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import ROUTES from "./routes"
 
-function App() {
+function AppContent() {
+    const navigate = useNavigate();
+    const publicLinks = [
+        {label: "Home", onClick: () => navigate("/")},
+        {label: "Login", onClick: () => navigate("/login")},
+        {label: "Create Account", onClick: () => navigate("/create-account")}
+    ]
+
     return (
-        <BrowserRouter>
+        <>
+            <Navbar links={publicLinks}/>
             <Routes>
                 {Object.values(ROUTES).map(({path, element}) => (
                     <Route
@@ -13,6 +22,14 @@ function App() {
                     />
                 ))}
             </Routes>
+        </>
+    );
+}
+
+function App() {
+       return (
+        <BrowserRouter>
+           <AppContent/>
         </BrowserRouter>
     );
 }

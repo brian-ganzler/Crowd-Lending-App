@@ -1,11 +1,9 @@
-import Navbar from "../components/Navbar";
 import {Grid, Box, Card, CardContent, Typography, Container} from '@mui/material';
 
 
 function HomePage() {
     return (
         <>
-            < Navbar />
             <Box sx={{ minHeight: "100vh", backgroundColor: "white" }}>
                 <Container maxWidth="lg" sx={{paddingTop:2}}> {/* Keep cards centered and avoid stretching excessively */}
                     < Grid container spacing={2} justifyContent={"center"}>
