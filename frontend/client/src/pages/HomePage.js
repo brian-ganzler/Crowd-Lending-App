@@ -1,4 +1,5 @@
 import {Grid, Box, Card, CardContent, Typography, Container} from '@mui/material';
+import HomeCard from "../components/Card.js"
 
 
 function HomePage() {
@@ -8,44 +9,28 @@ function HomePage() {
                 <Container maxWidth="lg" sx={{paddingTop:2}}> {/* Keep cards centered and avoid stretching excessively */}
                     < Grid container spacing={2} justifyContent={"center"}>
                         < Grid item xs={12} sm={6} md={3} >
-                            <Card sx={{width: "100%", height: 250, backgroundColor: "#e3f2fd", boxShadow: 3}}> {/* First row left card */}
-                                <CardContent sx={{maxWidth: "200px"}}>
-                                    <Typography variant="body2" align="center" >
-                                        "Crowd Lending helped me secure funding for my startup faster than I ever expected. The investors were supportive, and the process was incredibly smooth. Thanks to them, my business is thriving today!"
-                                        <br /><br />— Sarah T., Founder of EcoWave Technologies
-                                    </Typography>
-                                </CardContent>
-                            </Card>
+                            <HomeCard
+                                width="100%"
+                                height={250}
+                                text={"Crowd Lending helped me secure funding for my startup faster than I ever expected. The investors were supportive, and the process was incredibly smooth. Thanks to them, my business is thriving today! \n\n— Sarah T., Founder of EcoWave Technologies"}></HomeCard>
                         </Grid>
                         < Grid item xs={12} sm={6} md={3} >
-                            <Card sx={{width: "100%", height: 250, backgroundColor: "#e3f2fd", boxShadow: 3}}> {/* First row center card */}
-                                <CardContent sx={{maxWidth: "200px"}}>
-                                    <Typography variant="body2" align="center">
-                                        "Getting a loan through traditional banks was a nightmare. Crowd Lending made it simple, quick, and personal. I got funded in just three weeks and finally opened my second café!"
-                                        <br /><br />— James P., Owner of FreshBrew Café
-                                    </Typography>
-                                </CardContent>
-                            </Card>
+                            <HomeCard
+                                width="100%"
+                                height={250}
+                                text={"Getting a loan through traditional banks was a nightmare. Crowd Lending made it simple, quick, and personal. I got funded in just three weeks and finally opened my second café! \n\n— James P., Owner of FreshBrew Café"}></HomeCard>
                         </Grid>
                         < Grid item xs={12} sm={6} md={3}  >
-                            <Card sx={{width: "100%", height: 250, backgroundColor: "#e3f2fd", boxShadow: 3}}> {/* First row right card */}
-                                <CardContent sx={{maxWidth: "200px"}}>
-                                    <Typography variant="body2" align="center">
-                                        "As an investor, I love how transparent the platform is. I was able to support businesses that aligned with my values and still receive strong returns on my investments."
-                                        <br /><br />— Emily R., Private Investor
-                                    </Typography>
-                                </CardContent>
-                            </Card>
+                            <HomeCard
+                                width="100%"
+                                height={250}
+                                text={"As an investor, I love how transparent the platform is. I was able to support businesses that aligned with my values and still receive strong returns on my investments.\n\n— Emily R., Private Investor"}></HomeCard>
                         </Grid>
                         < Grid item xs={12} sm={6} lg={3}  >
-                            <Card sx={{width: "100%", height: 250, backgroundColor: "#e3f2fd", boxShadow: 3}}> {/* First row right card */}
-                                <CardContent sx={{maxWidth: "200px"}}>
-                                    <Typography variant="body2" align="center">
-                                        "When other lenders turned me away, Crowd Lending gave me a chance. Their platform connected me to real people who believed in my idea, and now my online boutique is thriving."
-                                        <br/><br />— Olivia M., Owner of NovaStyle Boutique
-                                    </Typography>
-                                </CardContent>
-                            </Card>
+                            <HomeCard
+                                width="100%"
+                                height={250}
+                                text={"When other lenders turned me away, Crowd Lending gave me a chance. Their platform connected me to real people who believed in my idea, and now my online boutique is thriving.\n\n— Olivia M., Owner of NovaStyle Boutique"}></HomeCard>
                         </Grid>
                     </Grid>
                 </Container>

@@ -15,9 +15,6 @@ export default function Navbar({links}) {
                     {links.map((link) => (
                         <Button key={link.label} color="inherit" onClick={link.onClick}> {link.label} </Button>
                     ))}
-                    {/*<Button color="inherit">Home</Button>*/}
-                    {/*<Button color="inherit">Log In</Button>*/}
-                    {/*<Button color="inherit">Invest</Button>*/}
                 </Toolbar>
             </AppBar>
         </Box>
