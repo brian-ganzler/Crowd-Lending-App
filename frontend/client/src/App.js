@@ -9,7 +9,6 @@ function AppContent() {
         {label: "Login", onClick: () => navigate("/login")},
         {label: "Create Account", onClick: () => navigate("/create-account")}
     ]
-
     return (
         <>
             <Navbar links={publicLinks}/>
