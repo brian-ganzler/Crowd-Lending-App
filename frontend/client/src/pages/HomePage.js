@@ -1,5 +1,5 @@
 import {Grid, Box, Card, CardContent, Typography, Container} from '@mui/material';
-import HomeCard from "../components/Card.js"
+import {HomeCard, MissionCard} from "../components/Card.js"
 
 
 function HomePage() {
@@ -36,17 +36,12 @@ function HomePage() {
                 </Container>
                 < Grid container justifyContent={"center"} >
                     < Grid item xs={12} >
-                        <Card sx={{width: 800, height: 200, padding: 0, margin: 2, backgroundColor: "#e3f2fd", boxShadow: 3}}> {/* Second row center card */}
-                            <CardContent>
-                                <Typography variant="h5" align="center">Our Mission</Typography>
-                                <Typography variant="body2" align="center">
-                                    The goal is to build a clean, professional web application that connects small businesses seeking funding with individual investors willing to lend money.
-                                    Businesses can post funding requests, and investors can browse opportunities, invest based on preferences, and earn returns over time.
-                                    <br/><br/>
-                                    The platform needs to look trustworthy, easy to navigate, and highlight real user success stories (testimonies) to build confidence for both lenders and borrowers.
-                                </Typography>
-                            </CardContent>
-                        </Card>
+                        <MissionCard
+                            width={800}
+                            height={200}
+                            text={"The goal is to build a clean, professional web application that connects small businesses seeking funding with individual investors willing to lend money. " +
+                                "Businesses can post funding requests, and investors can browse opportunities, invest based on preferences, and earn returns over time." +
+                                "\n\nThe platform needs to look trustworthy, easy to navigate, and highlight real user success stories (testimonies) to build confidence for both lenders and borrowers."}></MissionCard>
                     </Grid>
                 </Grid>
             </Box>
