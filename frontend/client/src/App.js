@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import {useState} from "react";
 import Navbar from "./components/Navbar";
-import ROUTES from "./routes"
+import ProtectedRoute from "./components/ProtectedRoute";
+import {PUBLIC_ROUTES, PRIVATE_ROUTES} from "./routes"
 
 
 function AppContent() {
@@ -26,11 +27,18 @@ function AppContent() {
         <>
             <Navbar links={linksToUse}/>
             <Routes>
-                {Object.values(ROUTES).map(({path, element}) => (
+                {Object.values(PUBLIC_ROUTES).map(({path, element}) => (
                     <Route
                         key={path}
                         path={path}
                         element={element}
+                    />
+                ))}
+                {Object.values(PRIVATE_ROUTES).map(({path, element}) => (
+                    <Route
+                        key={path}
+                        path={path}
+                        element={<ProtectedRoute>{element}</ProtectedRoute>}
                     />
                 ))}
             </Routes>

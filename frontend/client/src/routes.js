@@ -5,8 +5,7 @@ import CreateInvestorPage from "./pages/CreateInvestorPage";
 import DashboardPage from "./pages/DashboardPage";
 
 
-
-const ROUTES = {
+export const PUBLIC_ROUTES = {
     HOME: {
         path: "/",
         element: < HomePage />
@@ -18,7 +17,9 @@ const ROUTES = {
     CREATE_USER: {
         path: "/create-account",
         element: < CreateUserPage />
-    },
+    }
+}
+export const PRIVATE_ROUTES = {
     CREATE_INVESTOR: {
         path: "/create-investor",
         element: < CreateInvestorPage />
@@ -28,5 +29,3 @@ const ROUTES = {
         element: <DashboardPage />
     }
 };
-
-export default ROUTES;
