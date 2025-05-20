@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import {useState} from "react";
 import Navbar from "./components/Navbar";
-import ProtectedRoute from "./components/ProtectedRoute";
+import {ProtectedRoute} from "./components/Links";
 import {PUBLIC_ROUTES, PRIVATE_ROUTES} from "./routes"
 
 
