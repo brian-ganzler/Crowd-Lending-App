@@ -1,6 +1,5 @@
 import React from "react";
 import {Navigate} from 'react-router-dom';
-import {PUBLIC_ROUTES, PRIVATE_ROUTES} from "../routes.js";
 
 export function ProtectedRoute({children}) {
     const userID = localStorage.getItem("user_id")
