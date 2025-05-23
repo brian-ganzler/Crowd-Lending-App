@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { authenticateUser } from "../services/authService";
 import { Box, Typography, TextField, Button } from "@mui/material";
 
@@ -6,6 +7,7 @@ import { Box, Typography, TextField, Button } from "@mui/material";
 export function LoginUser() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -14,6 +16,8 @@ export function LoginUser() {
             alert(`User logged in successfully!`);
             setUsername("");
             setPassword("");
+            navigate("/dashboard")
+
         } catch (error) {
             alert("Failed to authenticate user.")
         }
