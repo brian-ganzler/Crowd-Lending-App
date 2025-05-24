@@ -8,15 +8,21 @@ export function LoginUser() {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const {setUser} = authenticateUser();
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            await authenticateUser({"username": username, "password": password});
+            const userData = await authenticateUser({"username": username, "password": password});
+            localStorage.setItem("user", JSON.stringify(userData));
+            setUser(userData);
+
             alert(`User logged in successfully!`);
             setUsername("");
             setPassword("");
             navigate("/dashboard")
+
 
         } catch (error) {
             alert("Failed to authenticate user.")
